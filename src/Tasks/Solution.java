@@ -4,8 +4,10 @@ public class Solution {
     public static void main(String[] args) {
         String s = "1100";
         String s1 = "11000";
+        String s2 = "111000";
         System.out.println(solve(s));
         System.out.println(solve(s1));
+        System.out.println(solve(s2));
     }
     public static int solve(String s) {
         int zer =0;
