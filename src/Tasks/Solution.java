@@ -7,12 +7,14 @@ public class Solution {
         String s2 = "111000";
         String s3 = "100000";
         String s4 = "1111110";
+        String s5 = "10";
 
         System.out.println(solve(s));
         System.out.println(solve(s1));
         System.out.println(solve(s2));
         System.out.println(solve(s3));
         System.out.println(solve(s4));
+        System.out.println(solve(s5));
     }
     public static int solve(String s) {
         int zer =0;
