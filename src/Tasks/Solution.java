@@ -3,7 +3,9 @@ package Tasks;
 public class Solution {
     public static void main(String[] args) {
         String s = "1100";
+        String s1 = "11000";
         System.out.println(solve(s));
+        System.out.println(solve(s1));
     }
     public static int solve(String s) {
         int zer =0;
