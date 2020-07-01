@@ -5,9 +5,12 @@ public class Solution {
         String s = "1100";
         String s1 = "11000";
         String s2 = "111000";
+        String s3 = "100000";
+
         System.out.println(solve(s));
         System.out.println(solve(s1));
         System.out.println(solve(s2));
+        System.out.println(solve(s3));
     }
     public static int solve(String s) {
         int zer =0;
