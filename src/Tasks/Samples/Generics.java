@@ -28,7 +28,6 @@ public class Generics {
         System.out.println("Average of strange array: " + strangeStat.getAverage());
         System.out.println("Median of strange array: " + strangeStat.getMedian());
 
-
     }
 }
 
