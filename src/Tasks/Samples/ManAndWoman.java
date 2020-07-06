@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.Samples;
 
 abstract class Human {
     private String name;

@@ -1,1 +1,0 @@
-package Tasks;public class Equation {    public static void main(String[] args) {        Object object = new Object();        String string = "something";        int x, y, z;        x = y = z = 8;        System.out.println(x);        System.out.println(++x);        System.out.println(x++);        System.out.println(x);    }}

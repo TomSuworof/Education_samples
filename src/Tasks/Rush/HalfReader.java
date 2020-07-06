@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.Rush;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.Samples;
 
 import java.lang.ref.*;
 // import java.lang.reflect.*;

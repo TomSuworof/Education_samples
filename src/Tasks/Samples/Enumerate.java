@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.Samples;
 
 enum Apple {
     GoldenDel(100),

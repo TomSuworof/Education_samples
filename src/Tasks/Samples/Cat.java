@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.Samples;
 
 public class Cat {
 
