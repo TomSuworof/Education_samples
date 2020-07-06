@@ -1,6 +1,6 @@
-package Tasks;
+package Tasks.BinarySearch;
 
-public class Solution {
+public class ShortestString {
     public static void main(String[] args) {
         {
             String s = "1100";
@@ -19,8 +19,8 @@ public class Solution {
         }
     }
     public static int solve(String s) {
-        int zer =0;
-        int one =0;
+        int zer = 0;
+        int one = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
                 one++;
