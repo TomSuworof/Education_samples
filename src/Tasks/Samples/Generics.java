@@ -27,6 +27,8 @@ public class Generics {
         MathStat<Integer> strangeStat = new MathStat<>(new Integer[] {5, 3, 7, 1, 9});
         System.out.println("Average of strange array: " + strangeStat.getAverage());
         System.out.println("Median of strange array: " + strangeStat.getMedian());
+
+
     }
 }
 
