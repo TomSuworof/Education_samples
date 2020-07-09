@@ -1,12 +1,14 @@
 package Tasks.Samples;
 
-abstract class Human {
+import java.io.Serializable;
+
+abstract class Human implements Serializable {
     private String name;
     private double age;
     private String address;
     final private double bornTime;
     final private boolean gender;
-    private static int population;
+    protected static int population;
 
     Human(String name, String address, boolean gender) {
         this.name = name;
@@ -46,15 +48,17 @@ abstract class Human {
     }
 }
 
-class Man extends Human {
+class Man extends Human implements Serializable {
     Man (String name, String address) {
         super(name, address, true);
+        Human.population++;
     }
 }
 
-class Woman extends Human {
+class Woman extends Human implements Serializable {
     Woman (String name, String address) {
         super(name, address, false);
+        Human.population++;
     }
 }
 
