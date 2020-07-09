@@ -25,8 +25,7 @@ public class Readers {
         }
 
         try (ObjectInputStream objectReader = new ObjectInputStream(new FileInputStream("forAnimal.dat"))) {
-            Object something = objectReader.readObject();
-            Animal anotherCat = (Animal) something;
+            Animal anotherCat = (Animal) objectReader.readObject();
             anotherCat.meow();
         } catch (IOException | ClassNotFoundException ioe) {
             ioe.printStackTrace();
