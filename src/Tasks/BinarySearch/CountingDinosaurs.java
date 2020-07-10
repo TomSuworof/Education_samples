@@ -1,5 +1,9 @@
 package Tasks.BinarySearch;
 
+/*
+ * https://binarysearch.io/problems/Counting-Dinosaurs
+ */
+
 public class CountingDinosaurs {
     public static void main(String[] args) {
         String a1 = "cdcjchvjjevcgjcdedgcchvrie";

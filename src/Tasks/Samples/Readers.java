@@ -1,6 +1,8 @@
 package Tasks.Samples;
 
 import java.io.*;
+import java.util.Arrays;
+
 import static java.lang.System.*;
 
 public class Readers {
@@ -30,10 +32,27 @@ public class Readers {
         } catch (IOException | ClassNotFoundException ioe) {
             ioe.printStackTrace();
         }
+
+        Console console = console();
+        if (console != null) {
+            out.println("Enter login: ");
+            String login = console.readLine();
+            out.println("Enter password: ");
+            char[] password = console.readPassword();
+            if (login.equals("VerySecretGuy") && (Arrays.equals(password, "VerySecretPassword".toCharArray()))) {
+                out.println("Accessed");
+            } else {
+                err.println("Access denied");
+            }
+        } else {
+            err.println("Console not found");
+        }
     }
 }
 
 class Animal implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private final String name;
 
     Animal(String name) {

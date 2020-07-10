@@ -1,12 +1,14 @@
 package Tasks.BinarySearch;
 
-import java.util.HashSet;
-
 /*
+ * https://binarysearch.io/problems/The-quick-brown-fox
+ *
+ * So buggy and completely wrong. DO NOT USE IT!
+ *
+ * not solved
+ */
 
-So buggy and completely wrong. DO NOT USE IT!
-
-*/
+import java.util.HashSet;
 
 public class TheQuickBrownFox {
     public static void main(String[] args) {

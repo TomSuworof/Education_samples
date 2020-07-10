@@ -1,5 +1,9 @@
 package Tasks.BinarySearch;
 
+/*
+ * https://binarysearch.io/problems/Shortest-String
+ */
+
 public class ShortestString {
     public static void main(String[] args) {
         {

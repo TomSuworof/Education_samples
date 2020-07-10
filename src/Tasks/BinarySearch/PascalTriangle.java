@@ -1,5 +1,9 @@
 package Tasks.BinarySearch;
 
+/*
+ * https://binarysearch.io/problems/Pascal's-Triangle
+ */
+
 import java.util.Arrays;
 
 public class PascalTriangle {

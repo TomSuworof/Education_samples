@@ -1,5 +1,11 @@
 package Tasks.BinarySearch;
 
+/*
+ * https://binarysearch.io/problems/And-One
+ *
+ * not solved
+ */
+
 public class AndOne {
     public static void main(String[] args) {
 //        int test1 = new int[]{9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
