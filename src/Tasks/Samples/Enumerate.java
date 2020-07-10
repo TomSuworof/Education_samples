@@ -26,7 +26,7 @@ public class Enumerate {
         for (Apple appleItem : Apple.values()) {
             System.out.print("In my bag I have " + appleItem);
             System.out.print(" and it costs " + appleItem.getPrice());
-            System.out.println(" also it takes " + appleItem.ordinal() + " place");
+            System.out.println(" also it takes " + appleItem.ordinal() + " place in my bag");
         }
     }
 }
