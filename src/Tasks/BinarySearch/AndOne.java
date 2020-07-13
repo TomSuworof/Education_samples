@@ -5,9 +5,11 @@ package Tasks.BinarySearch;
  */
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 public class AndOne {
     public static void main(String[] args) {
+        int[] test0 = {1, 9, 1};
         int[] test1 = new int[]{9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
                 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
                 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
@@ -16,12 +18,15 @@ public class AndOne {
                 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
                 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
                 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
+
+        print(test0); // [1, 9, 2]
+        print(test1); // [1, 0. ... 0]
     }
 
-    public int[] solve(int[] nums) {
+    static int[] solve(int[] nums) {
         StringBuilder nums_str = new StringBuilder();
         for (int number : nums) {
-            nums_str.append(String.valueOf(number));
+            nums_str.append(number);
         }
 
         System.out.println(nums_str);
@@ -37,5 +42,10 @@ public class AndOne {
             ans[i] = Integer.parseInt(ans_str.substring(i, i + 1));
         }
         return ans;
+    }
+
+    static void print(int[] array) {
+        System.out.println(Arrays.toString(solve(array)));
+        System.out.println("--------------------------");
     }
 }
