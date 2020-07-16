@@ -14,10 +14,12 @@ public class SpaceBattle {
         int[] rockets0 = {1, -2};
         int[] rockets1 = {1, 5, 3, -6};
         int[] rockets2 = {1, 5, 3, -6, 7};
+        int[] rockets3 = {36, -3, -94};
 
         print(rockets0); // [-2]
         print(rockets1); // [-6]
         print(rockets2); // [-6, 7]
+        print(rockets3); // [-94]
     }
     static int[] solve(int[] nums) {
         ArrayList<Integer> rockets = new ArrayList<>();
@@ -26,7 +28,30 @@ public class SpaceBattle {
             rockets.add(nums[i]);
             if (nums[i] < 0) {
                 for (int j = i - 1; j >= 0; j--) {
-                    // explodes
+                    if (nums[j] + nums[i] < 0) {
+                        rockets.remove(j);
+                    } else if (nums[j] + nums[i] == 0) {
+                        rockets.remove(i);
+                        rockets.remove(j);
+                        break;
+                    } else if (nums[j] + nums[i] > 0) {
+                        rockets.remove(i);
+                        break;
+                    }
+                }
+            }
+            if (nums[i] > 0) {
+                for (int j = i + 1; j < rockets.size(); j++) {
+                    if (nums[j] + nums[i] > 0) {
+                        rockets.remove(j);
+                    } else if (nums[j] + nums[i] == 0) {
+                        rockets.remove(i);
+                        rockets.remove(j);
+                        break;
+                    } else if (nums[j] + nums[i] < 0) {
+                        rockets.remove(i);
+                        break;
+                    }
                 }
             }
         }

@@ -4,7 +4,7 @@ package Tasks.BinarySearch;
  * https://binarysearch.io/problems/And-One
  */
 
-import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AndOne {
@@ -24,22 +24,27 @@ public class AndOne {
     }
 
     static int[] solve(int[] nums) {
-        StringBuilder nums_str = new StringBuilder();
-        for (int number : nums) {
-            nums_str.append(number);
+        ArrayList<Integer> nums_l = new ArrayList<>();
+        for (int num : nums) {
+            nums_l.add(num);
         }
 
-        System.out.println(nums_str);
+        for (int i = nums_l.size() - 1; i >= 0; i--) {
+            if (nums_l.get(i) + 1 > 9) {
+                nums_l.set(i, 0);
+            } else {
+                nums_l.set(i, nums_l.get(i) + 1);
+                return toArray(nums_l);
+            }
+        }
+        nums_l.add(0, 1);
+        return toArray(nums_l);
+    }
 
-        BigInteger number = new BigInteger(nums_str.toString());
-        // need to be Big Integer
-        String ans_str = String.valueOf(number.add(new BigInteger("1")));
-
-        System.out.println(ans_str);
-
-        int[] ans = new int[ans_str.length()];
-        for (int i = 0; i < ans.length; i++) {
-            ans[i] = Integer.parseInt(ans_str.substring(i, i + 1));
+    static int[] toArray(ArrayList<Integer> input) {
+        int[] ans = new int[input.size()];
+        for (int i = 0; i < input.size(); i++) {
+            ans[i] = input.get(i);
         }
         return ans;
     }
