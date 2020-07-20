@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
 public class ThirdPartyApp {
     public static void main(String[] args) throws AWTException {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            System.out.print("Type your command: ");
             String request = reader.readLine();
             switch (request) {
                 case "yandex":
