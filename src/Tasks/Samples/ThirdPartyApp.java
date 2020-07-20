@@ -8,12 +8,31 @@ package Tasks.Samples;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class ThirdPartyApp {
-    public static void main(String[] args) throws IOException, AWTException {
-        // openYandexFullScreen();
-        openGitAndPush();
+    public static void main(String[] args) throws AWTException {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            String request = reader.readLine();
+            switch (request) {
+                case "yandex":
+                    openYandexFullScreen();
+                    break;
+                case "powershell":
+                    openGitAndPush(false);
+                    break;
+                case "git":
+                    openGitAndPush(true);
+                    break;
+                default:
+                    System.out.println("I do not know this operation");
+                    break;
+            }
+        } catch (IOException ioe) {
+            System.err.println("Something went wrong");
+        }
     }
 
     static void openYandexFullScreen() throws IOException, AWTException {
@@ -26,12 +45,16 @@ public class ThirdPartyApp {
         robot.keyRelease(KeyEvent.VK_F11);
     }
 
-    static void openGitAndPush() throws IOException {
+    static void openGitAndPush(boolean git) throws IOException {
+        String mode = "";
+        if (git) {
+            mode = "git push origin master";
+        }
         // cmd does not want to change directory. so I suppose, powerShell will be better
-        Runtime.getRuntime().exec("cmd.exe /c start powershell.exe");
-        // already typed current directory
-        // type -> git push origin master
+        Runtime.getRuntime().exec("cmd.exe /c start powershell.exe " + mode);
+        // current directory was already typed
+        // type -> git push origin master (if we want)
         // profit
-        // bash?
+
     }
 }
