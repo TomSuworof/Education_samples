@@ -22,10 +22,10 @@ public class ThirdPartyApp {
                     openYandexFullScreen();
                     break;
                 case "powershell":
-                    openGitAndPush(false);
+                    openPowerShell(false);
                     break;
                 case "git":
-                    openGitAndPush(true);
+                    openPowerShell(true);
                     break;
                 default:
                     System.out.println("I do not know this operation");
@@ -46,7 +46,7 @@ public class ThirdPartyApp {
         robot.keyRelease(KeyEvent.VK_F11);
     }
 
-    static void openGitAndPush(boolean git) throws IOException {
+    static void openPowerShell(boolean git) throws IOException {
         String mode = "";
         if (git) {
             mode = "git push origin master";
