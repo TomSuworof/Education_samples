@@ -24,7 +24,7 @@ public class ThirdPartyApp {
                 case "powershell":
                     openPowerShell(false);
                     break;
-                case "git":
+                case "push":
                     openPowerShell(true);
                     break;
                 default:
