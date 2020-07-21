@@ -1,4 +1,4 @@
-package Tasks.Samples;
+package Tasks.Samples.Scripts;
 
 /*
  * D:\Programs\OpenOffice\program\soffice.exe

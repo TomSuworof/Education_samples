@@ -1,4 +1,6 @@
-package Tasks.Samples;
+package Tasks.Samples.Scripts;
+
+import Tasks.Samples.Scripts.ThirdPartyApp;
 
 import java.io.IOException;
 
