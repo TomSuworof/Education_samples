@@ -13,7 +13,7 @@ public class Do {
         String command = "javac Do.java"; // compile
         Runtime.getRuntime().exec("cmd.exe /c start powershell.exe " + command);
         command = "java Do"; // run this file
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i > 0; i++) {
             Runtime.getRuntime().exec("cmd.exe /c start powershell.exe " + command);
         } // infinity loop
     }
