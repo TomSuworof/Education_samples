@@ -50,9 +50,7 @@ public class AddingTime {
         s_time.add(Calendar.MINUTE, n);
         System.out.println(s_time.getTime());
 
-        SimpleDateFormat dateTimeFormat = new SimpleDateFormat("hh:mma");
-
-        String ans = dateTimeFormat.format(s_time.getTime()).toLowerCase();
+        String ans = new SimpleDateFormat("hh:mma").format(s_time.getTime()).toLowerCase();
         System.out.println(ans);
 
         return ans;
