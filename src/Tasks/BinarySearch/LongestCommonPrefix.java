@@ -13,7 +13,7 @@ public class LongestCommonPrefix {
         System.out.println(solve(words0)); // ant
     }
 
-    static String solve(String[] words) {
+    private static String solve(String[] words) {
         String ans = "";
         boolean all_have = true;
         Arrays.sort(words);

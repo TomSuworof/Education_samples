@@ -17,7 +17,7 @@ public class Dogcat {
         System.out.println(solve(text_0, word0_1, word1_1)); // 0
     }
 
-    static int solve(String text, String word0, String word1) {
+    private static int solve(String text, String word0, String word1) {
         String[] words = text.split(" ");
         Integer first = null;
         Integer second = null;

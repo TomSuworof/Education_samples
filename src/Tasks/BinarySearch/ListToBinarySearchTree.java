@@ -11,7 +11,7 @@ public class ListToBinarySearchTree {
         System.out.println(solve(nums0));
     }
 
-    static Tree solve(int[] nums) {
+    private static Tree solve(int[] nums) {
         return Build(nums, 0, nums.length);
     }
 

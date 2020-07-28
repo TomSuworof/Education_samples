@@ -16,7 +16,7 @@ public class InterleavedString {
         System.out.println(solve(s0_1, s1_1)); // axbc
     }
 
-    static String solve(String s0, String s1) {
+    private static String solve(String s0, String s1) {
         String ans = "";
 
         char[] first = s0.toCharArray();

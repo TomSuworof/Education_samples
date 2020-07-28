@@ -42,7 +42,7 @@ public class SpaceBattle {
         768, 912, 901, 883]
         */
     }
-    static int[] solve(int[] nums) {
+    private static int[] solve(int[] nums) {
         ArrayList<Integer> rockets = new ArrayList<>();
 
         for (int num : nums) {
@@ -76,7 +76,7 @@ public class SpaceBattle {
         }
         return ans;
     }
-    static void print(int[] array) {
+    private static void print(int[] array) {
         System.out.println(Arrays.toString(solve(array)));
     }
 }

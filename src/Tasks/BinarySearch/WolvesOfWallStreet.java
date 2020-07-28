@@ -11,7 +11,7 @@ public class WolvesOfWallStreet {
         System.out.println(solve(prices0)); // 7
     }
 
-    static int solve(int[] prices) {
+    private static int solve(int[] prices) {
         int profit = 0;
         for (int i = 0; i < prices.length - 1; i++) {
             if (prices[i] < prices[i + 1]) {

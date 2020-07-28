@@ -20,7 +20,7 @@ public class PHPConvention {
         System.out.println(solve(n2, convention2)); // true;
     }
 
-    static boolean solve(int n, int[] convention) {
+    private static boolean solve(int n, int[] convention) {
         int len = convention.length;
         for (int i = 0; i < len; i++) {
             if (convention[i] == 0) {

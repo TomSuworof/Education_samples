@@ -23,7 +23,7 @@ public class AndOne {
         print(test1); // [1, 0. ... 0]
     }
 
-    static int[] solve(int[] nums) {
+    private static int[] solve(int[] nums) {
         ArrayList<Integer> nums_l = new ArrayList<>();
         for (int num : nums) {
             nums_l.add(num);

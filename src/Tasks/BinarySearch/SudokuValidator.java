@@ -21,7 +21,7 @@ public class SudokuValidator {
         System.out.println(solve(matrix)); // true
     }
 
-    static boolean solve(int[][] matrix) {
+    private static boolean solve(int[][] matrix) {
         System.out.println("------------------------");
         int[] true_array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 

@@ -17,7 +17,7 @@ public class TVShows {
         System.out.println(solve(shows0, durations0, k0)); // 23
     }
 
-    static int solve(String[] shows, int[] durations, int k) {
+    private static int solve(String[] shows, int[] durations, int k) {
         HashMap<String, Integer> data = new HashMap<>();
         for (int i = 0; i < shows.length; i++) {
             if (data.containsKey(shows[i])) {

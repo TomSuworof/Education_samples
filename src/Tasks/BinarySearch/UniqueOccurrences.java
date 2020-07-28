@@ -19,7 +19,7 @@ public class UniqueOccurrences {
         System.out.println(solve(nums2)); // false;
     }
 
-    static boolean solve(int[] nums) {
+    private static boolean solve(int[] nums) {
         Arrays.sort(nums);
         ArrayList<Integer> occurrences = new ArrayList<>();
 
@@ -42,14 +42,6 @@ public class UniqueOccurrences {
         occurrences.add(count);
 
 //        System.out.println(occurrences);
-
-//        for (int i = 0; i < occurrences.size(); i++) {
-//            for (int j = i + 1; j < occurrences.size(); j++) {
-//                if (i != j && occurrences.get(i).intValue() == occurrences.get(j).intValue()) {
-//                    return false;
-//                }
-//            }
-//        }
 
         return new HashSet(occurrences).size() == occurrences.size();
     }

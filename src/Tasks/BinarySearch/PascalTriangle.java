@@ -13,7 +13,7 @@ public class PascalTriangle {
         }
     }
 
-    public static int[] solve(int n) {
+    private static int[] solve(int n) {
 
         int[] row = new int[n + 1];
         for (int i = 0; i < row.length; i++) {
@@ -22,7 +22,7 @@ public class PascalTriangle {
         return row;
     }
 
-    static int C(int m, int n) {
+    public static int C(int m, int n) {
         return (int) Math.ceil((fact(n) / (fact(m) * fact(n - m))));
     }
 

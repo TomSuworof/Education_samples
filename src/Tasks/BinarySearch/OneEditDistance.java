@@ -20,7 +20,7 @@ public class OneEditDistance {
         System.out.println(solve(s0_2, s1_2)); // false - 2 differences
     }
 
-    static boolean solve(String s0, String s1) {
+    private static boolean solve(String s0, String s1) {
         if (s0.equals(s1)) {
             return true;
         }

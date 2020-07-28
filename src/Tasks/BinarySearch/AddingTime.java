@@ -27,7 +27,7 @@ public class AddingTime {
         System.out.println(solve(s2, n2)); // 11:48pm
     }
 
-    static String solve(String s, int n) {
+    private static String solve(String s, int n) {
         int hours = Integer.parseInt(s.split(":")[0]);
         int minutes = Integer.parseInt(s.substring(s.length() - 4, s.length() - 2));
         String indicator = s.substring(s.length() - 2);

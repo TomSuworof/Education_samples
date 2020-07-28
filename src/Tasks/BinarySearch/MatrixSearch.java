@@ -17,7 +17,7 @@ public class MatrixSearch {
         System.out.println(solve(matrix, n)); // 5 cause we have 1, 2, 3, 3, [5], ...
     }
 
-    static int solve(int[][] matrix, int n) {
+    private static int solve(int[][] matrix, int n) {
         ArrayList<Integer> all_numbers = new ArrayList<>();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {

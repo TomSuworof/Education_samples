@@ -29,7 +29,7 @@ public class SumOfTwoNumbers {
         System.out.println(solve(nums4, k4)); // true
         System.out.println(solve(nums5, k5)); // true
     }
-    static boolean solve(int[] nums, int k) {
+    private static boolean solve(int[] nums, int k) {
         HashSet<Integer> nums_l = new HashSet<>();
         for (int num : nums) {
             if (nums_l.contains(k - num)) {

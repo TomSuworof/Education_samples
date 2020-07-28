@@ -22,7 +22,7 @@ public class ShortestString {
             System.out.println(solve(s5));
         }
     }
-    public static int solve(String s) {
+    private static int solve(String s) {
         int zer = 0;
         int one = 0;
         for (int i = 0; i < s.length(); i++) {

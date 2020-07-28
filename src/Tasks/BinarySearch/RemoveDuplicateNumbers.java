@@ -16,7 +16,7 @@ public class RemoveDuplicateNumbers {
         print(nums1); // [3, 1]
     }
 
-    static int[] solve(int[] nums) {
+    private static int[] solve(int[] nums) {
         ArrayList<Integer> ans = new ArrayList<>();
         ArrayList<Integer> removed = new ArrayList<>();
         for (int num : nums) {
@@ -34,7 +34,7 @@ public class RemoveDuplicateNumbers {
         return ans_array;
     }
 
-    static void print(int[] array) {
+    private static void print(int[] array) {
         System.out.println(Arrays.toString(solve(array)));
         System.out.println("--------------------------");
     }

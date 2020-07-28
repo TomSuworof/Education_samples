@@ -19,7 +19,7 @@ public class MostFrequentNumberInIntervals {
 
     }
 
-    static int solve(int[][] intervals) {
+    private static int solve(int[][] intervals) {
         int min = intervals[0][0];
         int max = intervals[0][0];
 

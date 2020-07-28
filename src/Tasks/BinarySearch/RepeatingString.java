@@ -15,7 +15,7 @@ public class RepeatingString {
         System.out.println(solve(s1)); // false
     }
 
-    static boolean solve(String s) {
+    private static boolean solve(String s) {
         // 1st case: "dogdogdog" in "og[dogdogdog]dogdo"
         // 2nd case: "dogcat' in "ogcatdogca" - can not find
         return (s.substring(1) + s.substring(0, s.length() - 1)).contains(s);

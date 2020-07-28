@@ -33,7 +33,7 @@ public class VanityPhoneNumber {
         print(digits); // ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
     }
 
-    static String[] solve(String digits) {
+    private static String[] solve(String digits) {
         HashMap<Integer, String> d = new HashMap<>(); // d means dictionary
         d.put(2, "abc");
         d.put(3, "def");
@@ -65,7 +65,7 @@ public class VanityPhoneNumber {
         return null;
     }
 
-    static void print(String digits) {
+    private static void print(String digits) {
         System.out.println(Arrays.toString(solve(digits)));
     }
 

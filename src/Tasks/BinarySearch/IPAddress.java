@@ -21,7 +21,7 @@ public class IPAddress {
         System.out.println(solve(s4)); // false
     }
 
-    static boolean solve(String s) {
+    private static boolean solve(String s) {
         String[] nums = s.split("\\.");
         if (nums.length != 4) {
             return false;

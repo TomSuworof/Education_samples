@@ -38,7 +38,7 @@ public class TheQuickBrownFox {
 
     }
 
-    static boolean solve(String[] words, String s) {
+    private static boolean solve(String[] words, String s) {
         System.out.println("-------------------------------------------------------");
 
         HashSet<String> words_s = new HashSet<>();

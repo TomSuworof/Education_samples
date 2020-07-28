@@ -16,7 +16,7 @@ public class FairPay {
         System.out.println(solve(ratings1)); // 7 cause we pay [1, 1, 2, 2, 1]
     }
 
-    static int solve(int[] ratings) {
+    private static int solve(int[] ratings) {
         int[] bills = new int[ratings.length];
         Arrays.fill(bills, 1);
         for (int i = 1; i < ratings.length; i++) {

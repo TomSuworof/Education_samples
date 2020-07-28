@@ -19,7 +19,7 @@ public class RotationGroups {
         */
     }
 
-    static int solve(String[] words) {
+    private static int solve(String[] words) {
         HashSet<String> s = new HashSet<>();
         int ans = 0;
         for (String word : words) {

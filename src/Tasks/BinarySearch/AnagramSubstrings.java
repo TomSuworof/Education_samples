@@ -13,7 +13,7 @@ public class AnagramSubstrings {
 
         System.out.println(solve(s0_0, s1_0)); // 3
     }
-    static int solve(String s0, String s1) {
+    private static int solve(String s0, String s1) {
         System.out.println("-----------------------------------");
         char[] s0_array = s0.toCharArray();
         Arrays.sort(s0_array);
