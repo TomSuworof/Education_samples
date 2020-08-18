@@ -17,7 +17,7 @@ abstract class Human implements Serializable {
         this.gender = gender;
     }
 
-    void _ () {
+    void _easter_egg_() {
         System.out.println("Easter egg is coming");
     }
 
@@ -77,7 +77,7 @@ public class ManAndWoman {
         mamasha.printAllData();
         gopnikGirl.printAllData();
 
-        mamasha._();
+        mamasha._easter_egg_();
 
         System.out.println(gopnik.equals(gopnikGirl));
         System.out.println(Human.getPopulation());
