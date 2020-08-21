@@ -41,15 +41,12 @@ public class PasswordValidation {
             if (specials.contains(String.valueOf(letter))) {
                 hasSpecial = true;
             }
-        }
-        if (!hasNumber || !hasLowerCase || !hasUpperCase || !hasSpecial) {
-            return false;
-        }
-
-        for (char letter : password.toCharArray()) {
             if (!valid.contains(String.valueOf(letter))) {
                 return false;
             }
+        }
+        if (!hasNumber || !hasLowerCase || !hasUpperCase || !hasSpecial) {
+            return false;
         }
 
         return true;
