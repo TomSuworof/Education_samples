@@ -45,10 +45,6 @@ public class PasswordValidation {
                 return false;
             }
         }
-        if (!hasNumber || !hasLowerCase || !hasUpperCase || !hasSpecial) {
-            return false;
-        }
-
-        return true;
+        return hasNumber && hasLowerCase && hasUpperCase && hasSpecial;
     }
 }
