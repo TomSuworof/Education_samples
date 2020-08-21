@@ -22,12 +22,21 @@ public class AddingTime {
         String s2 = "12:14am";
         int n2 = 1414;
 
+        String s3 = "12:29am";
+        int n3 = 0;
+
+        String s4 = "12:07pm";
+        int n4 = 721;
+
         System.out.println(solve(s0, n0)); // 07:00pm
         System.out.println(solve(s1, n1)); // 12:00am
         System.out.println(solve(s2, n2)); // 11:48pm
+        System.out.println(solve(s3, n3)); // 12:29am // wrong answer
+        System.out.println(solve(s4, n4)); // 12:08am // wrong answer
     }
 
     private static String solve(String s, int n) {
+        if (n == 0) return s;
         int hours = Integer.parseInt(s.split(":")[0]);
         int minutes = Integer.parseInt(s.substring(s.length() - 4, s.length() - 2));
         String indicator = s.substring(s.length() - 2);
