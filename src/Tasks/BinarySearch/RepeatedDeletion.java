@@ -2,46 +2,41 @@ package Tasks.BinarySearch;
 
 /*
  * https://binarysearch.io/problems/Repeated-Deletion
- *
- * // not solved
- *
  */
 
 public class RepeatedDeletion {
     public static void main(String[] args) {
         String s0 = "abbbaac";
         String s1 = "ywwyfbblaxgvweizrxmnzmtcckgkbgtecelryrgxwgfbbnquudfeyruuukieiyvwshjsfqbqyliphmw";
+        String s2 = "xkufknqvuiefxcsldwuqigdzurqanigbicmtpznyyyykfnndcsjbzztyzlvwv";
 
         System.out.println("Output:   " + solve(s0)); // c
         System.out.println("Expected: " + "c");
+
         System.out.println("Output:   " + solve(s1)); // flaxgvweizrxmnzmtkgkbgtecelryrgxwgfnqdfeyrkieiyvwshjsfqbqyliphmw
         System.out.println("Expected: " + "flaxgvweizrxmnzmtkgkbgtecelryrgxwgfnqdfeyrkieiyvwshjsfqbqyliphmw");
+
+        System.out.println("Output:   " + solve(s2)); // xkufknqvuiefxcsldwuqigdzurqanigbicmtpznkfdcsjbtyzlvwv
+        System.out.println("Expected: " + "xkufknqvuiefxcsldwuqigdzurqanigbicmtpznkfdcsjbtyzlvwv");
     }
 
     private static String solve(String s) {
-        StringBuilder str = new StringBuilder(s);
-
-        boolean wasDeletion = true;
-        while (wasDeletion) {
-            wasDeletion = false;
-            for (int i = 0; i < str.length() - 1; i++) {
-                StringBuilder repeated = new StringBuilder();
-                repeated.append(str.charAt(i));
-                for (int j = i + 1; j < str.length(); j++) {
-                    if (str.charAt(j) == repeated.charAt(0)) {
-                        repeated.append(str.charAt(j));
-                    } else {
-                        break;
-                    }
-                }
-                System.out.println(str + " " + repeated);
-                if (repeated.length() > 1) {
-                    str = new StringBuilder(str.toString().replace(repeated, ""));
-                    wasDeletion = true;
+        String ans = "" + s.charAt(0);
+        char lastDeleted = ' ';
+        for (int i = 1; i < s.length(); i++) {
+            System.out.println(ans + " " + s.charAt(i) + " " + lastDeleted);
+            if (ans.length() != 0) {
+                if (ans.charAt(ans.length() - 1) == s.charAt(i)) {
+                    lastDeleted = ans.charAt(ans.length() - 1);
+                    ans = ans.substring(0, ans.length() - 1);
+                    continue;
                 }
             }
+            if (s.charAt(i) != lastDeleted) {
+                ans += s.charAt(i);
+                lastDeleted = ' ';
+            }
         }
-
-        return str.toString();
+        return ans;
     }
 }
